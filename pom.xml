@@ -5,4 +5,16 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>EberharterRechner</name>
   <description>AA DOBL Rechner Eberharter</description>
+  
+    <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.10.4</version>
+        <configuration>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
