@@ -17,7 +17,7 @@ public class Userinput
 		{			
 			System.out.println("~~~~~-----TASCHENRECHNER-----~~~~~\n");
 			System.out.println("Bitte geben Sie die erste Zahl ein:");
-			double zahl1 = Parser.toDouble(scan.next());
+			double zahl1 = Parser.toDouble(scan.nextLine());
 			double zahl2 = 0;
 			String operator = new String();
 			Result res = new Result(zahl1);
@@ -29,7 +29,7 @@ public class Userinput
 				{
 					System.out.print(operators.toString()+" ");
 				}
-				operator = scan.next();
+				operator = scan.nextLine();
 				
 				while(!Operators.contains(operator))
 				{
@@ -38,12 +38,12 @@ public class Userinput
 					{
 						System.out.print(operators1.toString()+" ");
 					}
-					operator = scan.next();
+					operator = scan.nextLine();
 				}
 				if(!operator.equals("="))
 	            {
 					System.out.println("Bitte geben Sie die nächste Zahl ein:");
-					zahl2 = Parser.toDouble(scan.next());
+					zahl2 = Parser.toDouble(scan.nextLine());
 	            }
 				
 				switch(operator)
@@ -75,7 +75,7 @@ public class Userinput
 							while(zahl2 == 0)
 							{
 								System.err.println("Division durch 0 nicht erlaubt, bitte einen anderen Divisor angeben!");
-								zahl2 = Parser.toDouble(scan.next());
+								zahl2 = Parser.toDouble(scan.nextLine());
 							}
 						}
 						Divide div = new Divide(zahl1, zahl2);

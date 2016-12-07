@@ -4,10 +4,10 @@ public class Divide implements Operator
 {
 	private double n1, n2;
 	
-	public Divide(double number1, double number2)
+	public Divide(double zahl1, double zahl2)
 	{
-		this.n1 = number1;
-		this.n2 = number2;
+		this.n1 = zahl1;
+		this.n2 = zahl2;
 	}
 
 

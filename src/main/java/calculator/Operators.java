@@ -21,8 +21,8 @@ public enum Operators
 	
 	public static boolean contains(String test) {
 
-	    for (Operators c : Operators.values()) {
-	        if (c.toString().equals(test)) {
+	    for (Operators operators : Operators.values()) {
+	        if (operators.toString().equals(test)) {
 	            return true;
 	        }
 	    }

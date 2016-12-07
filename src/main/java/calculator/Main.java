@@ -4,7 +4,7 @@ public class Main
 {
 	public static void main(String[]args)
 	{
-		Userinput input = new Userinput();
-		input.start();
+		Userinput userinput = new Userinput();
+		userinput.start();
 	}
 }

@@ -1,7 +1,7 @@
 package calculator;
 import junit.framework.*;
 
-public class JunitTest extends TestCase
+public class CalculationTest extends TestCase
 {
 	protected double n1,n2, expectedresult;
 	//Add a = new Add(2,2);
@@ -31,5 +31,12 @@ public class JunitTest extends TestCase
 		Divide div = new Divide(n1, n2);
 		expectedresult = 3;
 		assertEquals(expectedresult, div.calculate());
+	}
+	
+	public void testMultiply()
+	{
+		Multiply mul = new Multiply(n1, n2);
+		expectedresult = 12;
+		assertEquals(expectedresult, mul.calculate());
 	}
 }

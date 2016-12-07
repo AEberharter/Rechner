@@ -1,13 +1,16 @@
 package calculator;
+import java.util.Scanner;
 
 public class Parser
 {
-	  public static double toDouble(final String str) 
+	static Scanner scan = new Scanner(System.in);
+	  public static double toDouble(String str) 
 	  {
-	      if (str == null) 
-	      {
-	          return 0.0;
-	      }
+		  while(str.isEmpty())
+		  {
+	    		  System.err.println("Please enter a digit!");
+	    		  str = scan.next();
+		  }
 	      try 
 	      {
 	          return Double.parseDouble(str);
@@ -15,7 +18,8 @@ public class Parser
 	      catch (final NumberFormatException nfe) 
 	      {
 	    	  System.err.println("Please enter digits only!");
-	          return 0.0;
+	          return Parser.toDouble(scan.next());
 	      }
-	}
+	  }
+	  
 }
