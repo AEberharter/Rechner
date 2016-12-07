@@ -1,6 +1,4 @@
 package calculator;
-
-
 import junit.framework.*;
 
 public class JunitTest extends TestCase
@@ -11,10 +9,6 @@ public class JunitTest extends TestCase
 	{
 		n1 = 6.0;
 		n2 = 2.0;
-		
-		
-		Multiply mul = new Multiply(n1, n2);
-		Divide div = new Divide(n1, n2);
 	}
 	
 	public void testAdd()
@@ -30,5 +24,12 @@ public class JunitTest extends TestCase
 		Substract sub = new Substract(n1, n2);
 		expectedresult = 4;
 		assertEquals(expectedresult, sub.calculate());
+	}
+	
+	public void testDivision()
+	{
+		Divide div = new Divide(n1, n2);
+		expectedresult = 3;
+		assertEquals(expectedresult, div.calculate());
 	}
 }
